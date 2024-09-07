@@ -1,0 +1,43 @@
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+#gameMenu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#gameControlButtons {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+#gameRunningInfo {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 600px;
+	margin-bottom: 20px;
+}
+
+#gameplayArea {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	max-width: 600px;
+}
+
+.whackamoleSpawnArea {
+	width: calc(20% - 10px);
+}

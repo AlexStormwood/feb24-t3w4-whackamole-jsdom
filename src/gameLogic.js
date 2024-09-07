@@ -29,6 +29,17 @@ Array.from(spawnableAreas).forEach(area => {
 
 
 
+function toggleCursor(){
+	let bodyElement = document.getElementsByTagName("body")[0];
+	if (gameTimeRemaining > 0) {
+		bodyElement.style.cursor = 'url(./assets/Hammer.gif), auto';
+	} else {
+		bodyElement.style.cursor = "";
+	}
+}
+
+
+
 // Game Score and Timer 
 
 function gameTimeStep(){
@@ -184,6 +195,8 @@ function startGame(desiredGameTime = defaultGameDuration){
 	toggleGameControlButtons();
 	// toggle game content
 	toggleGameplayContent();
+	// toggle the cursor
+	toggleCursor();
 
 	gameCountdownInterval = setInterval(() => {
 		gameTimeRemaining -= 1;
@@ -224,8 +237,10 @@ function stopGame(){
 	// toggle game controls
 	toggleGameControlButtons();
 	// toggle game content
-	toggleGameplayContent();
+	// toggleGameplayContent();
 	wipeImagesFromSpawningAreas();
+	// toggle the cursor
+	toggleCursor();
 
 	console.log("Stopped the game. Game time remaining is now: " + gameTimeRemaining);
 }
