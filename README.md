@@ -25,3 +25,4 @@ Whackamole game in the browser using HTML and JS.
 - Make the cursor a hammer 
 	- only when the game is running 
 - Faster spawns 
+- Removing spawns on a timer 
